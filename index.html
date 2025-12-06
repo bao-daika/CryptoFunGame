@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Crypto Tetris</h1>
+    <div id="main-container">
+      <div id="left-panel">
+        <div id="scoreboard">BTC:0 | ETH:0 | DOGE:0 | SOL:0 | XRP:0</div>
+        <img id="bearGif" src="images/bear_dance.gif" alt="Bear Dancing">
+      </div>
+      <div id="canvas-wrapper" style="position:relative;">
+        <canvas id="gameCanvas" width="240" height="480"></canvas>
+        <button id="startBtn">Start Game</button>
+        <img id="dogeGif" src="images/doge_run.gif" alt="Doge Running">
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="music/background.mp3" loop></audio>
+  <audio id="barkSound" src="music/bark.mp3"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
