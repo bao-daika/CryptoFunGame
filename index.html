@@ -7,19 +7,45 @@
 </head>
 <body>
   <div id="wrapper">
-    <h1>Crypto Tetris</h1>
+    <!-- Header panel: Game title + Scoreboard -->
+    <div id="header-panel">
+      <h1>Crypto Tetris</h1>
+      <div id="scoreboard">
+        <div id="btcScore">BTC: 0</div>
+        <div id="ethScore">ETH: 0</div>
+        <div id="dogeScore">DOGE: 0</div>
+        <div id="solScore">SOL: 0</div>
+        <div id="xrpScore">XRP: 0</div>
+      </div>
+    </div>
+
+    <!-- Main content -->
     <div id="main-container">
       <div id="left-panel">
-        <div id="scoreboard">BTC:0 | ETH:0 | DOGE:0 | SOL:0 | XRP:0</div>
         <img id="bearGif" src="images/bear_dance.gif" alt="Bear Dancing">
+        
+        <!-- Instruction Section -->
+        <div id="instructions">
+          <h2>Instructions</h2>
+          <p>Rotate = A or Space Bar</p>
+          <p>Pause Game = P</p>
+          <p>If BTC = 2100, Satoshi Nakamoto appears.</p>
+        </div>
       </div>
-      <div id="canvas-wrapper" style="position:relative;">
+
+      <div id="canvas-wrapper">
         <canvas id="gameCanvas" width="240" height="480"></canvas>
         <button id="startBtn">Start Game</button>
         <img id="dogeGif" src="images/doge_run.gif" alt="Doge Running">
+        <div id="gameOverOverlay">
+          <button id="restartBtn">Restart</button>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- Peter Gold gif (will be displayed after score >= 10) -->
+  <img id="peterGoldGif" src="images/peter_gold.gif" alt="Peter Gold" style="display:none;">
 
   <audio id="bgMusic" src="music/background.mp3" loop></audio>
   <audio id="barkSound" src="music/bark.mp3"></audio>
@@ -27,3 +53,4 @@
   <script src="game.js"></script>
 </body>
 </html>
+
